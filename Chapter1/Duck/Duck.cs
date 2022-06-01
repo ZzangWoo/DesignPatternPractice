@@ -30,5 +30,15 @@ namespace Chapter1.Duck
         {
             Console.WriteLine("모든 오리는 물에 뜹니다. 가짜 오리도 뜨죠.");
         }
+
+        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        {
+            this.flyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            this.quackBehavior = quackBehavior;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Chapter1.Duck;
+using Chapter1.Duck.Behavior;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,13 @@ namespace Chapter1
             mallard.Display();
             mallard.PerformQuack();
             mallard.PerformFly();
+
+            Console.WriteLine("\n--------------------\n");
+
+            Chapter1.Duck.Duck model = new ModelDuck();
+            model.PerformFly();
+            model.SetFlyBehavior(new FlyRocketPowered());
+            model.PerformFly();
         }
     }
 }
